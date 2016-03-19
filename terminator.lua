@@ -49,7 +49,7 @@ Windows:
 Mac OS X:
   Current User: /Users/%your_name%/Library/Application Support/org.videolan.vlc/lua/extensions/
      All Users: /Applications/VLC.app/Contents/MacOS/share/lua/extensions/
-     
+
 --]]
 
 function descriptor()
@@ -63,6 +63,7 @@ function descriptor()
 end
 
 function activate()
+  last = vlc.playlist.current()
 end
 
 function deactivate()
